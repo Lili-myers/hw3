@@ -8,6 +8,26 @@ function pageLoad() {
   // e.g. ask 'ride' for its length or only grab the first member of the Array
   console.log(ride)
 
+
+if (ride.length > 1 ) {
+  levelOfService = 'Noober Pool'}
+  else if (ride[0].purpleRequested == true) {
+    levelOfService = 'Noober Purple'}
+  else if (ride[0].numberOfPassengers > 3) {
+    levelOfService = 'Noober XL'}
+  else {
+    levelOfService = 'Noober X'}
+    console.log(levelOfService)
+
+passenger1Name = ride[0].passengerDetails.first + ' ' + ride[0].passengerDetails.last
+passenger1Phone = ride[0].passengerDetails.phoneNumber
+passenger1NumberOfPassengers = ride[0].numberOfPassengers
+passenger1PickupAddressLine1 = ride[0].pickupLocation.address
+passenger1PickupAddressLine2 = ride[0].pickupLocation.city + ',' + ride[0].pickupLocation.state + ' ' + ride[0].pickupLocation.zip
+passenger1DropoffAddressLine1 = ride[0].dropoffLocation.address
+passenger1DropoffAddressLine2 = ride[0].dropoffLocation.city + ',' + ride[0].dropoffLocation.state + ' ' + ride[0].dropoffLocation.zip
+
+
   // these variables map to the elements on the finished page;
   // assign the proper value to each variable
 
