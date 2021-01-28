@@ -8,6 +8,15 @@ function pageLoad() {
   // e.g. ask 'ride' for its length or only grab the first member of the Array
   console.log(ride)
 
+  // Goal - Each time the end-user clicks "Next Ride", display a new, randomized ride
+  //hierarchy for pool  = pool --> purple --> XL --> X
+  // some other business logic:
+    //single riders can ride Noober Pool
+    // the Array contains more than one element, display "Noober Pool" as the level of service, and show the second and third legs of the ride using the passenger-2-x and passenger-3-x variables
+    // If the rider has requested the luxury "Purple" level of service, i.e. purpleRequested, display "Noober Purple" as the level of service.
+    //If the numberOfPassengers in a single ride request is greater than 3, we'll need to upgrade to a larger car. Display "Noober XL" as the level of service.
+    //Anything else is the normal level of service, "Noober X".
+
 
 if (ride.length > 1 ) {
   levelOfService = 'Noober Pool'}
@@ -23,29 +32,29 @@ passenger1Name = ride[0].passengerDetails.first + ' ' + ride[0].passengerDetails
 passenger1Phone = ride[0].passengerDetails.phoneNumber
 passenger1NumberOfPassengers = ride[0].numberOfPassengers
 passenger1PickupAddressLine1 = ride[0].pickupLocation.address
-passenger1PickupAddressLine2 = ride[0].pickupLocation.city + ',' + ride[0].pickupLocation.state + ' ' + ride[0].pickupLocation.zip
+passenger1PickupAddressLine2 = ride[0].pickupLocation.city + ', ' + ride[0].pickupLocation.state + ' ' + ride[0].pickupLocation.zip
 passenger1DropoffAddressLine1 = ride[0].dropoffLocation.address
-passenger1DropoffAddressLine2 = ride[0].dropoffLocation.city + ',' + ride[0].dropoffLocation.state + ' ' + ride[0].dropoffLocation.zip
+passenger1DropoffAddressLine2 = ride[0].dropoffLocation.city + ', ' + ride[0].dropoffLocation.state + ' ' + ride[0].dropoffLocation.zip
 
 
 if (ride.length > 1) {
   passenger2Name = ride[1].passengerDetails.first + ' ' + ride[1].passengerDetails.last
   passenger2Phone = ride[1].passengerDetails.phoneNumber
+  passenger2NumberOfPassengers = ride[1].numberOfPassengers
   passenger2PickupAddressLine1 = ride[1].pickupLocation.address
-  passenger2PickupAddressLine2 = ride[1].pickupLocation.city + ',' + ride[1].pickupLocation.state + ' ' + ride[1].pickupLocation.zip
+  passenger2PickupAddressLine2 = ride[1].pickupLocation.city + ', ' + ride[1].pickupLocation.state + ' ' + ride[1].pickupLocation.zip
   passenger2DropoffAddressLine1 = ride[1].dropoffLocation.address
-  passenger2DropoffAddressLine2 = ride[1].dropoffLocation.city + ',' + ride[1].dropoffLocation.state + ' ' + ride[1].dropoffLocation.zip
+  passenger2DropoffAddressLine2 = ride[1].dropoffLocation.city + ', ' + ride[1].dropoffLocation.state + ' ' + ride[1].dropoffLocation.zip
 }
 
 if (ride.length > 2) {
-  passenger1Name = ride[0].passengerDetails.first + ' ' + ride[0].passengerDetails.last
-  passenger1Phone = ride[0].passengerDetails.phoneNumber
-  passenger3NumberOfPassengers = ride[0].numberOfPassengers
-  passenger1PickupAddressLine1 = ride[0].pickupLocation.address
-  passenger1PickupAddressLine2 = ride[0].pickupLocation.city + ',' + ride[0].pickupLocation.state + ' ' + ride[0].pickupLocation.zip
-  passenger1DropoffAddressLine1 = ride[0].dropoffLocation.address
-  passenger1DropoffAddressLine2 = ride[0].dropoffLocation.city + ',' + ride[0].dropoffLocation.state + ' ' + ride[0].dropoffLocation.zip
-
+  passenger3Name = ride[2].passengerDetails.first + ' ' + ride[2].passengerDetails.last
+  passenger3Phone = ride[2].passengerDetails.phoneNumber
+  passenger3NumberOfPassengers = ride[2].numberOfPassengers
+  passenger3PickupAddressLine1 = ride[2].pickupLocation.address
+  passenger3PickupAddressLine2 = ride[2].pickupLocation.city + ', ' + ride[2].pickupLocation.state + ' ' + ride[2].pickupLocation.zip
+  passenger3DropoffAddressLine1 = ride[2].dropoffLocation.address
+  passenger3DropoffAddressLine2 = ride[2].dropoffLocation.city + ', ' + ride[2].dropoffLocation.state + ' ' + ride[2].dropoffLocation.zip
 }
 
   // these variables map to the elements on the finished page;
