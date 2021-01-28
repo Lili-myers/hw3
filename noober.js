@@ -18,13 +18,14 @@ function pageLoad() {
     //Anything else is the normal level of service, "Noober X".
 
 if (ride.length > 1 ) {
-  levelOfService = 'Noober Pool'}
-  else if (ride[0].purpleRequested == true) {
-    levelOfService = 'Noober Purple'}
-  else if (ride[0].numberOfPassengers > 3) {
-    levelOfService = 'Noober XL'}
-  else {
-    levelOfService = 'Noober X'}
+  levelOfService = 'Noober Pool'
+} else if (ride[0].purpleRequested == true) {
+    levelOfService = 'Noober Purple'
+} else if (ride[0].numberOfPassengers > 3) {
+    levelOfService = 'Noober XL'
+} else {
+    levelOfService = 'Noober X'
+}
     console.log(levelOfService)
 
 passenger1Name = ride[0].passengerDetails.first + ' ' + ride[0].passengerDetails.last
