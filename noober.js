@@ -17,7 +17,6 @@ function pageLoad() {
     //If the numberOfPassengers in a single ride request is greater than 3, we'll need to upgrade to a larger car. Display "Noober XL" as the level of service.
     //Anything else is the normal level of service, "Noober X".
 
-
 if (ride.length > 1 ) {
   levelOfService = 'Noober Pool'}
   else if (ride[0].purpleRequested == true) {
@@ -35,7 +34,6 @@ passenger1PickupAddressLine1 = ride[0].pickupLocation.address
 passenger1PickupAddressLine2 = ride[0].pickupLocation.city + ', ' + ride[0].pickupLocation.state + ' ' + ride[0].pickupLocation.zip
 passenger1DropoffAddressLine1 = ride[0].dropoffLocation.address
 passenger1DropoffAddressLine2 = ride[0].dropoffLocation.city + ', ' + ride[0].dropoffLocation.state + ' ' + ride[0].dropoffLocation.zip
-
 
 if (ride.length > 1) {
   passenger2Name = ride[1].passengerDetails.first + ' ' + ride[1].passengerDetails.last
